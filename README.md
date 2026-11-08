@@ -13,3 +13,10 @@ Soroban contracts for Community Rush, Bountixx's sponsor-funded verified challen
 The contract settles a rule-bound sponsor reward. It does not evaluate arbitrary submissions. An authorized verifier signs deterministic results off-chain; the contract validates authorization and prevents duplicate settlement.
 
 Read `PROJECT_CONTEXT.md` before contributing.
+
+## Testnet release guardrail
+
+Use `scripts/deploy-testnet.ps1` only after independent review. Its default is
+a Testnet-only dry preflight; submitting a transaction requires an explicit
+`-Execute -Confirmation DEPLOY_TESTNET`. It does not carry or write account
+secrets.
