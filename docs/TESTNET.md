@@ -37,3 +37,9 @@ The script never accepts a non-Testnet passphrase and never stores credentials.
 ## Safety
 
 This repository does not authorize Mainnet deployment until independent review of the contract, result-attestation flow, expiry/refund path, access control, and operational key management.
+
+## Current Testnet deployment
+
+The first empty Rush Vault deployment is recorded in
+[`TESTNET_RELEASE_2026-11-08.md`](./TESTNET_RELEASE_2026-11-08.md). It is a
+public Testnet reference only; no sponsor-funded campaign or payout is live.
