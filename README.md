@@ -2,11 +2,15 @@
 
 Soroban contracts for Community Rush, Bountixx's sponsor-funded verified challenge layer.
 
-## Planned contract modules
+## Current contract
 
-- `rush_vault`: sponsor funding, payout, cancellation, refund, and expiry.
-- `rush_registry`: campaign identity, manifest hashes, and authorized verifier configuration.
-- `result_attestation`: replay-safe recording of signed outcomes.
+`rush_vault` is the first-release contract. It locks a sponsor-funded token
+amount against a campaign ID and manifest hash, records the verifier active at
+funding time, settles once with that verifier's Stellar authorization, and
+allows the sponsor to refund only after the stated ledger deadline. It exposes
+public campaign/config reads and supports verifier rotation for future
+campaigns. Its scope intentionally excludes arbitrary submission scoring,
+wallet private-key handling, and Mainnet deployment.
 
 ## Contract design principles
 
